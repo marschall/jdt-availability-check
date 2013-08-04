@@ -3,6 +3,8 @@ package com.github.marschall.jdtavailabilitycheck;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 
+import javax.servlet.http.Cookie;
+
 public class ClassLoaderBean {
 
 
@@ -15,6 +17,10 @@ public class ClassLoaderBean {
 
     public boolean isApplicationClassLoaderThreadContextClassLoader() {
         return this.getApplicationClassLoader() == this.getThreadContextClassLoader();
+    }
+
+    public boolean isApiClassLoadedFromApplication() {
+        return Cookie.class.getClassLoader() == ClassLoaderBean.class.getClassLoader();
     }
 
     public String getThreadContextClassLoaderName() {
