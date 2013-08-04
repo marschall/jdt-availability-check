@@ -21,6 +21,21 @@
 		</thead>
 		<tbody>
 			<tr>
+			  <th>JDT compiler class</th>
+			  <td><jsp:text>${availability.jdtCompilerClassName}</jsp:text></td>
+			  <td><jsp:text>${availability.jdtCompilerClassClassVisible}</jsp:text></td>
+			</tr>
+			<tr>
+			  <th>JDT internal compiler class</th>
+			  <td><jsp:text>${availability.jdtInternalCompilerClassName}</jsp:text></td>
+			  <td><jsp:text>${availability.jdtInternalCompilerClassClassVisible}</jsp:text></td>
+			</tr>
+			<tr>
+			  <th>JSR-199 compiler class</th>
+			  <td><jsp:text>${availability.jsr199CompilerClassName}</jsp:text></td>
+			  <td><jsp:text>${availability.jsr199CompilerClassClassVisible}</jsp:text></td>
+			</tr>
+			<tr>
 			  <th>ServletRequest class</th>
 			  <td><jsp:text>${availability.servletRequestClass}</jsp:text></td>
 			  <td><jsp:text>${availability.servletRequestClassVisible}</jsp:text></td>
@@ -34,6 +49,21 @@
 			  <th>HttpSession class</th>
 			  <td><jsp:text>${availability.httpSessionClass}</jsp:text></td>
 			  <td><jsp:text>${availability.httpSessionClassVisible}</jsp:text></td>
+			</tr>
+			<tr>
+			  <th>ServletContext class</th>
+			  <td><jsp:text>${availability.servletContextClass}</jsp:text></td>
+			  <td><jsp:text>${availability.servletContextClassVisible}</jsp:text></td>
+			</tr>
+			<tr>
+			  <th>ServletConfig class</th>
+			  <td><jsp:text>${availability.servletConfigClass}</jsp:text></td>
+			  <td><jsp:text>${availability.servletConfigClassVisible}</jsp:text></td>
+			</tr>
+			<tr>
+			  <th>ServletContext class</th>
+			  <td><jsp:text>${availability.pageContextClass}</jsp:text></td>
+			  <td><jsp:text>${availability.pageContextClassVisible}</jsp:text></td>
 			</tr>
 		</tbody>
 	</table>
