@@ -67,5 +67,29 @@
 			</tr>
 		</tbody>
 	</table>
+	
+	<h1>ClassLoader</h1>
+	<jsp:useBean id="classLoader" class="com.github.marschall.jdtavailabilitycheck.ClassLoaderBean" />
+	Can check for parallel capable: <jsp:text>${classLoader.checkPossible}</jsp:text>
+	Application and TCCL are same: <jsp:text>${classLoader.applicationClassLoaderThreadContextClassLoader}</jsp:text>
+	
+	<table>
+		<thead>
+			<tr><th>Description</th><th>Class</th><th>Parallel Capable</th></tr>
+		</thead>
+		<tbody>
+			<tr>
+			  <th>Thread Context ClassLoader</th>
+			  <td><jsp:text>${classLoader.threadContextClassLoaderName}</jsp:text></td>
+			  <td><jsp:text>${classLoader.threadContextClassLoaderParallelCapable}</jsp:text></td>
+			</tr>
+			<tr>
+			  <th>Application ClassLoader</th>
+			  <td><jsp:text>${classLoader.applicationClassLoaderName}</jsp:text></td>
+			  <td><jsp:text>${classLoader.applicationClassLoaderParallelCapable}</jsp:text></td>
+			</tr>
+		</tbody>
+	</table>
+	
 </body>
 </html>
