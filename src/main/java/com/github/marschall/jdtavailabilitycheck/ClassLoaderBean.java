@@ -3,7 +3,11 @@ package com.github.marschall.jdtavailabilitycheck;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 
+import javax.print.Doc;
 import javax.servlet.http.Cookie;
+import javax.xml.stream.XMLEventFactory;
+
+import sun.misc.Unsafe;
 
 public class ClassLoaderBean {
 
@@ -21,6 +25,18 @@ public class ClassLoaderBean {
 
     public boolean isApiClassLoadedFromApplication() {
         return Cookie.class.getClassLoader() == ClassLoaderBean.class.getClassLoader();
+    }
+
+    public boolean isSeXmlClassLoadedFromApplication() {
+        return XMLEventFactory.class.getClassLoader() == ClassLoaderBean.class.getClassLoader();
+    }
+
+    public boolean isSeClassLoadedFromApplication() {
+        return Doc.class.getClassLoader() == ClassLoaderBean.class.getClassLoader();
+    }
+
+    public boolean isSeNonApiClassLoadedFromApplication() {
+        return Unsafe.class.getClassLoader() == ClassLoaderBean.class.getClassLoader();
     }
 
     public String getThreadContextClassLoaderName() {

@@ -27,48 +27,48 @@
 		<tbody>
 			<tr>
 			  <th>JDT compiler class</th>
-			  <td><jsp:text>${availability.jdtCompilerClassName}</jsp:text></td>
-			  <td><jsp:text>${availability.jdtCompilerClassClassVisible}</jsp:text></td>
+			  <td><code><jsp:text>${availability.jdtCompilerClassName}</jsp:text></code></td>
+			  <td><code><jsp:text>${availability.jdtCompilerClassClassVisible}</jsp:text></code></td>
 			</tr>
 			<tr>
 			  <th>JDT internal compiler class</th>
-			  <td><jsp:text>${availability.jdtInternalCompilerClassName}</jsp:text></td>
-			  <td><jsp:text>${availability.jdtInternalCompilerClassClassVisible}</jsp:text></td>
+			  <td><code><jsp:text>${availability.jdtInternalCompilerClassName}</jsp:text></code></td>
+			  <td><code><jsp:text>${availability.jdtInternalCompilerClassClassVisible}</jsp:text></code></td>
 			</tr>
 			<tr>
 			  <th>JSR-199 compiler class</th>
-			  <td><jsp:text>${availability.jsr199CompilerClassName}</jsp:text></td>
-			  <td><jsp:text>${availability.jsr199CompilerClassClassVisible}</jsp:text></td>
+			  <td><code><jsp:text>${availability.jsr199CompilerClassName}</jsp:text></code></td>
+			  <td><code><jsp:text>${availability.jsr199CompilerClassClassVisible}</jsp:text></code></td>
 			</tr>
 			<tr>
 			  <th>ServletRequest class</th>
-			  <td><jsp:text>${availability.servletRequestClass}</jsp:text></td>
-			  <td><jsp:text>${availability.servletRequestClassVisible}</jsp:text></td>
+			  <td><code><jsp:text>${availability.servletRequestClass}</jsp:text></code></td>
+			  <td><code><jsp:text>${availability.servletRequestClassVisible}</jsp:text></code></td>
 			</tr>
 			<tr>
 			  <th>ServletResponse class</th>
-			  <td><jsp:text>${availability.servletResponseClass}</jsp:text></td>
-			  <td><jsp:text>${availability.servletResponseClassVisible}</jsp:text></td>
+			  <td><code><jsp:text>${availability.servletResponseClass}</jsp:text></code></td>
+			  <td><code><jsp:text>${availability.servletResponseClassVisible}</jsp:text></code></td>
 			</tr>
 			<tr>
 			  <th>HttpSession class</th>
-			  <td><jsp:text>${availability.httpSessionClass}</jsp:text></td>
-			  <td><jsp:text>${availability.httpSessionClassVisible}</jsp:text></td>
+			  <td><code><jsp:text>${availability.httpSessionClass}</jsp:text></code></td>
+			  <td><code><jsp:text>${availability.httpSessionClassVisible}</jsp:text></code></td>
 			</tr>
 			<tr>
 			  <th>ServletContext class</th>
-			  <td><jsp:text>${availability.servletContextClass}</jsp:text></td>
-			  <td><jsp:text>${availability.servletContextClassVisible}</jsp:text></td>
+			  <td><code><jsp:text>${availability.servletContextClass}</jsp:text></code></td>
+			  <td><code><jsp:text>${availability.servletContextClassVisible}</jsp:text></code></td>
 			</tr>
 			<tr>
 			  <th>ServletConfig class</th>
-			  <td><jsp:text>${availability.servletConfigClass}</jsp:text></td>
-			  <td><jsp:text>${availability.servletConfigClassVisible}</jsp:text></td>
+			  <td><code><jsp:text>${availability.servletConfigClass}</jsp:text></code></td>
+			  <td><code><jsp:text>${availability.servletConfigClassVisible}</jsp:text></code></td>
 			</tr>
 			<tr>
 			  <th>ServletContext class</th>
-			  <td><jsp:text>${availability.pageContextClass}</jsp:text></td>
-			  <td><jsp:text>${availability.pageContextClassVisible}</jsp:text></td>
+			  <td><code><jsp:text>${availability.pageContextClass}</jsp:text></code></td>
+			  <td><code><jsp:text>${availability.pageContextClassVisible}</jsp:text></code></td>
 			</tr>
 		</tbody>
 	</table>
@@ -90,8 +90,28 @@
 			  <td><jsp:text>${classLoader.applicationClassLoaderThreadContextClassLoader}</jsp:text></td>
 			</tr>
 			<tr>
-			  <th>API classes loaded from application</th>
+			  <th>EE-API classes loaded from application</th>
 			  <td><jsp:text>${classLoader.apiClassLoadedFromApplication}</jsp:text></td>
+			</tr>
+			<tr>
+			  <th>SE-XML-API classes loaded from application</th>
+			  <td><jsp:text>${classLoader.seXmlClassLoadedFromApplication}</jsp:text></td>
+			</tr>
+			<tr>
+			  <th>SE-API classes loaded from application</th>
+			  <td><jsp:text>${classLoader.seClassLoadedFromApplication}</jsp:text></td>
+			</tr>
+			<tr>
+			  <th>SE-Non-API classes loaded from application</th>
+			  <td><jsp:text>${classLoader.seNonApiClassLoadedFromApplication}</jsp:text></td>
+			</tr>
+			<tr>
+			  <th>SE-Non-API classes visible</th>
+			  <td><jsp:text>${availability.seNonApiClassVisible}</jsp:text></td>
+			</tr>
+			<tr>
+			  <th>JSTL present</th>
+			  <td><jsp:text>${availability.jstlPresent}</jsp:text></td>
 			</tr>
 		</tbody>
 	</table>
@@ -103,13 +123,13 @@
 		<tbody>
 			<tr>
 			  <th>Thread Context ClassLoader</th>
-			  <td><jsp:text>${classLoader.threadContextClassLoaderName}</jsp:text></td>
-			  <td><jsp:text>${classLoader.threadContextClassLoaderParallelCapable}</jsp:text></td>
+			  <td><code><jsp:text>${classLoader.threadContextClassLoaderName}</jsp:text></code></td>
+			  <td><code><jsp:text>${classLoader.threadContextClassLoaderParallelCapable}</jsp:text></code></td>
 			</tr>
 			<tr>
 			  <th>Application ClassLoader</th>
-			  <td><jsp:text>${classLoader.applicationClassLoaderName}</jsp:text></td>
-			  <td><jsp:text>${classLoader.applicationClassLoaderParallelCapable}</jsp:text></td>
+			  <td><code><jsp:text>${classLoader.applicationClassLoaderName}</jsp:text></code></td>
+			  <td><code><jsp:text>${classLoader.applicationClassLoaderParallelCapable}</jsp:text></code></td>
 			</tr>
 		</tbody>
 	</table>
