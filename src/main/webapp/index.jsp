@@ -2,6 +2,11 @@
 <html>
 <head>
 	<title>Class Availability Check</title>
+  <style type="text/css">
+    tbody th {
+      text-align: right;
+    }
+  </style>
 </head>
 <body>
 	<h1>Class Availability Check</h1>
