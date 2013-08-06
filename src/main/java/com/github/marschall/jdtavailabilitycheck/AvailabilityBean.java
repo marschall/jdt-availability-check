@@ -123,6 +123,14 @@ public class AvailabilityBean {
         return this.isClassAvailable(this.getJsr199CompilerClassName());
     }
 
+    public boolean isSeNonApiClassVisible() {
+        return this.isClassAvailable("sun.reflect.Reflection");
+    }
+
+    public boolean isJstlPresent() {
+        return this.isClassAvailable("javax.servlet.jsp.jstl.core.Config");
+    }
+
     private boolean isClassAvailable(String className) {
       try {
         Class.forName(className);
