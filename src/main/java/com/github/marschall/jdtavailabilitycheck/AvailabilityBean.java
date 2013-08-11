@@ -15,6 +15,18 @@ public class AvailabilityBean {
 
     private static final String JSR_199 = "org.apache.jasper.compiler.Jsr199JavaCompiler";
 
+    private static final String LOG4J_LOGGER = "org.apache.logging.log4j.Logger";
+
+    private static final String LOG4J_LOGMANAGER = "org.apache.logging.log4j.LogManager";
+
+    private static final String SLF4J_LOGGER = "org.slf4j.Logger";
+
+    private static final String SLF4J_LOGGER_FACTORY = "org.slf4j.LoggerFactory";
+
+    private static final String JCL_LOG = "org.apache.commons.logging.Log";
+
+    private static final String JCL_LOG_FACTORY = "org.apache.commons.logging.LogFactory";
+
     private HttpServletRequest request;
 
     private HttpServletResponse response;
@@ -121,6 +133,54 @@ public class AvailabilityBean {
 
     public boolean isJsr199CompilerClassClassVisible() {
         return this.isClassAvailable(this.getJsr199CompilerClassName());
+    }
+
+    public String getLog4jLoggerClassName() {
+        return LOG4J_LOGGER;
+    }
+
+    public boolean isLog4jLoggerClassClassVisible() {
+        return this.isClassAvailable(this.getLog4jLoggerClassName());
+    }
+
+    public String getLog4jLogManagerClassName() {
+        return LOG4J_LOGMANAGER;
+    }
+
+    public boolean isLog4jLogManagerClassClassVisible() {
+        return this.isClassAvailable(this.getLog4jLogManagerClassName());
+    }
+
+    public String getSlf4jLoggerClassName() {
+        return SLF4J_LOGGER;
+    }
+
+    public boolean isSlf4jLoggerClassVisible() {
+        return this.isClassAvailable(this.getSlf4jLoggerClassName());
+    }
+
+    public String getSlf4jLoggerFactoryClassName() {
+        return SLF4J_LOGGER_FACTORY;
+    }
+
+    public boolean isSlf4jLoggerFactoryClassVisible() {
+        return this.isClassAvailable(this.getSlf4jLoggerFactoryClassName());
+    }
+
+    public String getJclLoggerClassName() {
+        return JCL_LOG;
+    }
+
+    public boolean isJclLoggerClassVisible() {
+        return this.isClassAvailable(this.getJclLoggerClassName());
+    }
+
+    public String getJclLoggerFactoryClassName() {
+        return JCL_LOG_FACTORY;
+    }
+
+    public boolean isJclLoggerFactoryClassVisible() {
+        return this.isClassAvailable(this.getJclLoggerFactoryClassName());
     }
 
     public boolean isSeNonApiClassVisible() {

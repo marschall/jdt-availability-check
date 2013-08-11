@@ -70,6 +70,21 @@
 			  <td><code><jsp:text>${availability.pageContextClass}</jsp:text></code></td>
 			  <td><code><jsp:text>${availability.pageContextClassVisible}</jsp:text></code></td>
 			</tr>
+			<tr>
+			  <th>Log4j Logger class</th>
+			  <td><code><jsp:text>${availability.log4jLoggerClassName}</jsp:text></code></td>
+			  <td><code><jsp:text>${availability.log4jLoggerClassClassVisible}</jsp:text></code></td>
+			</tr>
+			<tr>
+			  <th>SLF4J Logger class</th>
+			  <td><code><jsp:text>${availability.slf4jLoggerClassName}</jsp:text></code></td>
+			  <td><code><jsp:text>${availability.slf4jLoggerClassVisible}</jsp:text></code></td>
+			</tr>
+			<tr>
+			  <th>JCL Logger class</th>
+			  <td><code><jsp:text>${availability.jclLoggerClassName}</jsp:text></code></td>
+			  <td><code><jsp:text>${availability.jclLoggerClassVisible}</jsp:text></code></td>
+			</tr>
 		</tbody>
 	</table>
 	
