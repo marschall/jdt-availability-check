@@ -76,6 +76,15 @@ public class ClassLoaderBean {
         }
     }
 
+    public String getClassUrl() {
+      // .getProtocol()
+      // vfs:/content/jdt-availability-check.war/WEB-INF/classes/com/github/marschall/jdtavailabilitycheck/ClassLoaderBean.class
+      // file:/Users/marschall/Hacking/Tomcat/apache-tomcat-8.0.15/webapps/jdt-availability-check/WEB-INF/classes/com/github/marschall/jdtavailabilitycheck/ClassLoaderBean.class
+      String resourceName = ClassLoaderBean.class.getName().replace('.', '/') + ".class";
+      return getApplicationClassLoader().getResource(resourceName).toString();
+    }
+
+
     private Method getIsRegisteredMethod() {
         for (Class<?> clazz : ClassLoader.class.getDeclaredClasses()) {
             if (clazz.getName().equals("java.lang.ClassLoader$ParallelLoaders")) {

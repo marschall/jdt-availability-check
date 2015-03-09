@@ -128,6 +128,10 @@
 			  <th>JSTL present</th>
 			  <td><jsp:text>${availability.jstlPresent}</jsp:text></td>
 			</tr>
+			<tr>
+			  <th>Class URL</th>
+			  <td><jsp:text>${classLoader.classUrl}</jsp:text></td>
+			</tr>
 		</tbody>
 	</table>
 	
