@@ -132,6 +132,14 @@
 			  <th>Class URL</th>
 			  <td><jsp:text>${classLoader.classUrl}</jsp:text></td>
 			</tr>
+			<tr>
+			  <th>DocumentBuilderFactory</th>
+			  <td><jsp:text>${classLoader.documentBuilderFactory}</jsp:text></td>
+			</tr>
+			<tr>
+			  <th>TransformerFactory</th>
+			  <td><jsp:text>${classLoader.transformerFactory}</jsp:text></td>
+			</tr>
 		</tbody>
 	</table>
 	

@@ -5,7 +5,9 @@ import java.lang.reflect.Modifier;
 
 import javax.print.Doc;
 import javax.servlet.http.Cookie;
+import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.stream.XMLEventFactory;
+import javax.xml.transform.TransformerFactory;
 
 import sun.misc.Unsafe;
 
@@ -74,6 +76,15 @@ public class ClassLoaderBean {
     } catch (ReflectiveOperationException e) {
       return false;
     }
+  }
+
+
+  public String getDocumentBuilderFactory() {
+    return DocumentBuilderFactory.newInstance().getClass().getName();
+  }
+
+  public String getTransformerFactory() {
+    return TransformerFactory.newInstance().getClass().getName();
   }
 
   public String getClassUrl() {
