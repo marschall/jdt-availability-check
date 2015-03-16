@@ -140,6 +140,10 @@
 			  <th>TransformerFactory</th>
 			  <td><jsp:text>${classLoader.transformerFactory}</jsp:text></td>
 			</tr>
+			<tr>
+			  <th>Parent URLs</th>
+			  <td><jsp:text>${classLoader.parentUrls}</jsp:text></td>
+			</tr>
 		</tbody>
 	</table>
 	
@@ -157,6 +161,11 @@
 			  <th>Application ClassLoader</th>
 			  <td><code><jsp:text>${classLoader.applicationClassLoaderName}</jsp:text></code></td>
 			  <td><code><jsp:text>${classLoader.applicationClassLoaderParallelCapable}</jsp:text></code></td>
+			</tr>
+			<tr>
+			  <th>Parent ClassLoader</th>
+			  <td><code><jsp:text>${classLoader.parentClassLoaderName}</jsp:text></code></td>
+			  <td><code><jsp:text>${classLoader.parentClassLoaderParallelCapable}</jsp:text></code></td>
 			</tr>
 		</tbody>
 	</table>
