@@ -76,6 +76,11 @@
 			  <td><code><jsp:text>${availability.log4jLoggerClassClassVisible}</jsp:text></code></td>
 			</tr>
 			<tr>
+			  <th>Log4j LogManager class</th>
+			  <td><code><jsp:text>${availability.log4jLogManagerClassName}</jsp:text></code></td>
+			  <td><code><jsp:text>${availability.log4jLogManagerClassClassVisible}</jsp:text></code></td>
+			</tr>
+			<tr>
 			  <th>SLF4J Logger class</th>
 			  <td><code><jsp:text>${availability.slf4jLoggerClassName}</jsp:text></code></td>
 			  <td><code><jsp:text>${availability.slf4jLoggerClassVisible}</jsp:text></code></td>
@@ -84,6 +89,51 @@
 			  <th>JCL Logger class</th>
 			  <td><code><jsp:text>${availability.jclLoggerClassName}</jsp:text></code></td>
 			  <td><code><jsp:text>${availability.jclLoggerClassVisible}</jsp:text></code></td>
+			</tr>
+			<tr>
+			  <th>CGlib Enhancer class</th>
+			  <td><code><jsp:text>${availability.cglibEnhancerClassName}</jsp:text></code></td>
+			  <td><code><jsp:text>${availability.cglibEnhancerClassVisible}</jsp:text></code></td>
+			</tr>
+			<tr>
+			  <th>Guava Maps class</th>
+			  <td><code><jsp:text>${availability.guavaMapsClassName}</jsp:text></code></td>
+			  <td><code><jsp:text>${availability.guavaMapsClassVisible}</jsp:text></code></td>
+			</tr>
+			<tr>
+			  <th>Jackson Factory class</th>
+			  <td><code><jsp:text>${availability.jacksonFactoryClassName}</jsp:text></code></td>
+			  <td><code><jsp:text>${availability.jacksonFactoryClassVisible}</jsp:text></code></td>
+			</tr>
+			<tr>
+			  <th>Jettison Configuration class</th>
+			  <td><code><jsp:text>${availability.jettisonConfigurationClassName}</jsp:text></code></td>
+			  <td><code><jsp:text>${availability.jettisonConfigurationClassVisible}</jsp:text></code></td>
+			</tr>
+			<tr>
+			  <th>MIME pull class</th>
+			  <td><code><jsp:text>${availability.mimePullMessageClassName}</jsp:text></code></td>
+			  <td><code><jsp:text>${availability.mimePullMessageClassVisible}</jsp:text></code></td>
+			</tr>
+			<tr>
+			  <th>Apache Tools Tarbuffer class</th>
+			  <td><code><jsp:text>${availability.apacheToolsTarbufferClassName}</jsp:text></code></td>
+			  <td><code><jsp:text>${availability.apacheToolsTarbufferClassVisible}</jsp:text></code></td>
+			</tr>
+			<tr>
+			  <th>Ant Task class</th>
+			  <td><code><jsp:text>${availability.antTaskClassName}</jsp:text></code></td>
+			  <td><code><jsp:text>${availability.antTaskClassVisible}</jsp:text></code></td>
+			</tr>
+			<tr>
+			  <th>Woodstox InputFactory class</th>
+			  <td><code><jsp:text>${availability.woodstoxInputFactoryClassName}</jsp:text></code></td>
+			  <td><code><jsp:text>${availability.woodstoxInputFactoryClassVisible}</jsp:text></code></td>
+			</tr>
+			<tr>
+			  <th>ASM ClassVisitor class</th>
+			  <td><code><jsp:text>${availability.asmClassVisitorClassName}</jsp:text></code></td>
+			  <td><code><jsp:text>${availability.asmClassVisitorClassVisible}</jsp:text></code></td>
 			</tr>
 		</tbody>
 	</table>
