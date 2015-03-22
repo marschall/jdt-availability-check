@@ -50,6 +50,10 @@ public class AvailabilityBean {
   private static final String EJB = "javax.ejb.EJB";
 
   private static final String PERSISTENCE_CONTEXT = "javax.persistence.PersistenceContext";
+  
+  private static final String STRING_UTILS = "org.apache.commons.lang.StringUtils";
+  
+  private static final String STRING_UTILS3 = "org.apache.commons.lang3.StringUtils";
 
   private static final String RESOURCE = "javax.annotation.Resource";
 
@@ -295,6 +299,22 @@ public class AvailabilityBean {
   
   public boolean isEjbClassVisible() {
     return this.isClassAvailable(this.getEjbClassName());
+  }
+  
+  public String getStringUtilsClassName() {
+    return STRING_UTILS;
+  }
+  
+  public boolean isStringUtilsClassVisible() {
+    return this.isClassAvailable(this.getStringUtilsClassName());
+  }
+  
+  public String getStringUtils3ClassName() {
+    return STRING_UTILS3;
+  }
+  
+  public boolean isStringUtils3ClassVisible() {
+    return this.isClassAvailable(this.getStringUtils3ClassName());
   }
   
   public String getPersistenceContextClassName() {
