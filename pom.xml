@@ -74,6 +74,7 @@
       <artifactId>jboss-jsp-api_2.2_spec</artifactId>
       <scope>provided</scope>
     </dependency>
+    <!-- 
     <dependency>
       <groupId>xalan</groupId>
       <artifactId>xalan</artifactId>
@@ -84,6 +85,7 @@
       <artifactId>xercesImpl</artifactId>
       <version>2.11.0</version>
     </dependency>
+     -->
   </dependencies>
 
   <dependencyManagement>
