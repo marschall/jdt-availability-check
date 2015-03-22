@@ -28,9 +28,32 @@
           </execution>
         </executions>
       </plugin>
-      <!-- <plugin> <artifactId>maven-javadoc-plugin</artifactId> <executions> 
-        <execution> <id>attach-javadocs</id> <goals> <goal>jar</goal> </goals> </execution> 
-        </executions> </plugin> -->
+      <plugin>
+        <artifactId>maven-war-plugin</artifactId>
+        <!-- 
+        <configuration>
+          <classifier>default</classifier>
+        </configuration>
+         -->
+        <executions>
+          <execution>
+            <id>add-non-default</id>
+            <phase>package</phase>
+            <goals>
+              <goal>war</goal>
+            </goals>
+            <configuration>
+              <classifier>non-default</classifier>
+              <webResources>
+                <resource>
+                  <directory>src/main/glassfish</directory>
+                  <directory>src/main/tomcat</directory>
+                </resource>
+              </webResources>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
     <pluginManagement>
       <plugins>
@@ -60,6 +83,20 @@
       <activation>
         <activeByDefault>false</activeByDefault>
       </activation>
+      <build>
+        <plugins>
+          <plugin>
+            <artifactId>maven-war-plugin</artifactId>
+            <configuration>
+              <webResources>
+                <resource>
+                  <directory>src/main/glassfish</directory>
+                </resource>
+              </webResources>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
     </profile>
   </profiles>
 
@@ -74,18 +111,18 @@
       <artifactId>jboss-jsp-api_2.2_spec</artifactId>
       <scope>provided</scope>
     </dependency>
-    <!-- 
+    <!--
     <dependency>
       <groupId>xalan</groupId>
-      <artifactId>xalan</artifactId>
+      <artifactId>xalan</artifactId> 
       <version>2.7.2</version>
     </dependency>
     <dependency>
-      <groupId>xerces</groupId>
+      <groupId>xerces</groupId> 
       <artifactId>xercesImpl</artifactId>
       <version>2.11.0</version>
-    </dependency>
-     -->
+      </dependency>
+      -->
   </dependencies>
 
   <dependencyManagement>
