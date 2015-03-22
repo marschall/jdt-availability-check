@@ -34,25 +34,25 @@ public class AvailabilityBean {
   private static final String GUAVA_MAPS = "com.google.common.collect.Maps";
 
   private static final String JACKSON_FACTORY = "org.codehaus.jackson.JsonFactory";
-  
+
   private static final String JETTISON_CONFIGURATION = "org.codehaus.jettison.mapped.Configuration";
-  
+
   private static final String MIMEPULL_MESSAGE = "org.jvnet.mimepull.MIMEMessage";
-  
+
   private static final String APACHE_TOOLS_TARBUFFER = "org.apache.tools.tar.TarBuffer";
-  
+
   private static final String ANT_TASK = "org.apache.tools.ant.Task";
-  
+
   private static final String WOODSTOX_INPUT_FACTORY = "com.ctc.wstx.stax.WstxInputFactory";
-  
+
   private static final String ASM_CLASS_VISITOR = "org.objectweb.asm.ClassVisitor";
-  
+
   private static final String EJB = "javax.ejb.EJB";
-  
+
   private static final String PERSISTENCE_CONTEXT = "javax.persistence.PersistenceContext";
-  
+
   private static final String RESOURCE = "javax.annotation.Resource";
-  
+
   /**
    * From xml-apis, not JDK.
    * 
@@ -216,83 +216,83 @@ public class AvailabilityBean {
   public boolean isJclLoggerFactoryClassVisible() {
     return this.isClassAvailable(this.getJclLoggerFactoryClassName());
   }
-  
+
   public String getCglibEnhancerClassName() {
     return CGLIB_ENHANCER;
   }
-  
+
   public boolean isCglibEnhancerClassVisible() {
     return this.isClassAvailable(this.getCglibEnhancerClassName());
   }
-  
+
   public String getGuavaMapsClassName() {
     return GUAVA_MAPS;
   }
-  
+
   public boolean isGuavaMapsClassVisible() {
     return this.isClassAvailable(this.getGuavaMapsClassName());
   }
-  
+
   public String getJacksonFactoryClassName() {
     return JACKSON_FACTORY;
   }
-  
+
   public boolean isJacksonFactoryClassVisible() {
     return this.isClassAvailable(this.getJacksonFactoryClassName());
   }
-  
+
   public String getJettisonConfigurationClassName() {
     return JETTISON_CONFIGURATION;
   }
-  
+
   public boolean isJettisonConfigurationClassVisible() {
     return this.isClassAvailable(this.getJettisonConfigurationClassName());
   }
-  
+
   public String getMimePullMessageClassName() {
     return MIMEPULL_MESSAGE;
   }
-  
+
   public boolean isMimePullMessageClassVisible() {
     return this.isClassAvailable(this.getMimePullMessageClassName());
   }
-  
+
   public String getApacheToolsTarbufferClassName() {
     return APACHE_TOOLS_TARBUFFER;
   }
-  
+
   public boolean isApacheToolsTarbufferClassVisible() {
     return this.isClassAvailable(this.getApacheToolsTarbufferClassName());
   }
-  
+
   public String getAntTaskClassName() {
     return ANT_TASK;
   }
-  
+
   public boolean isAntTaskClassVisible() {
     return this.isClassAvailable(this.getAntTaskClassName());
   }
-  
+
   public String getWoodstoxInputFactoryClassName() {
     return WOODSTOX_INPUT_FACTORY;
   }
-  
+
   public boolean isWoodstoxInputFactoryClassVisible() {
     return this.isClassAvailable(this.getWoodstoxInputFactoryClassName());
   }
-  
+
   public String getAsmClassVisitorClassName() {
     return ASM_CLASS_VISITOR;
   }
-  
+
   public boolean isAsmClassVisitorClassVisible() {
     return this.isClassAvailable(this.getAsmClassVisitorClassName());
   }
-  
+
   public String getElementTraversalClassName() {
     return ELEMENT_TRAVERSAL;
   }
-  
+
   public boolean isElementTraversalClassVisible() {
     return this.isClassAvailable(this.getElementTraversalClassName());
   }

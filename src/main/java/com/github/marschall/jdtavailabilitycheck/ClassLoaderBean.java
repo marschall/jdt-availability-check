@@ -50,15 +50,15 @@ public class ClassLoaderBean {
   public boolean isThreadContextClassLoaderParallelCapable() {
     return isParallelCapable(getThreadContextClassLoader());
   }
-  
+
   public String getParentClassLoaderName() {
     return getParentClassLoader().getClass().getName();
   }
-  
+
   public boolean isParentClassLoaderParallelCapable() {
     return isParallelCapable(getParentClassLoader());
   }
-  
+
   public String getParentUrls() {
     ClassLoader parentClassLoader = this.getParentClassLoader();
     if (parentClassLoader instanceof URLClassLoader) {
@@ -88,7 +88,7 @@ public class ClassLoaderBean {
   private ClassLoader getThreadContextClassLoader() {
     return Thread.currentThread().getContextClassLoader();
   }
-  
+
   private ClassLoader getParentClassLoader() {
     return getApplicationClassLoader().getParent();
   }
