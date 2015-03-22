@@ -288,6 +288,22 @@ public class AvailabilityBean {
   public boolean isAsmClassVisitorClassVisible() {
     return this.isClassAvailable(this.getAsmClassVisitorClassName());
   }
+  
+  public String getEjbClassName() {
+    return EJB;
+  }
+  
+  public boolean isEjbClassVisible() {
+    return this.isClassAvailable(this.getEjbClassName());
+  }
+  
+  public String getPersistenceContextClassName() {
+    return PERSISTENCE_CONTEXT;
+  }
+  
+  public boolean isPersistenceContextClassVisible() {
+    return this.isClassAvailable(this.getPersistenceContextClassName());
+  }
 
   public String getElementTraversalClassName() {
     return ELEMENT_TRAVERSAL;
