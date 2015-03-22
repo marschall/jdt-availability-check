@@ -46,6 +46,20 @@ public class AvailabilityBean {
   private static final String WOODSTOX_INPUT_FACTORY = "com.ctc.wstx.stax.WstxInputFactory";
   
   private static final String ASM_CLASS_VISITOR = "org.objectweb.asm.ClassVisitor";
+  
+  private static final String EJB = "javax.ejb.EJB";
+  
+  private static final String PERSISTENCE_CONTEXT = "javax.persistence.PersistenceContext";
+  
+  private static final String RESOURCE = "javax.annotation.Resource";
+  
+  /**
+   * From xml-apis, not JDK.
+   * 
+   * <p>Xerces alone without this will break.</p>
+   * https://issues.apache.org/jira/browse/XERCESJ-1466
+   */
+  private static final String ELEMENT_TRAVERSAL = "org.w3c.dom.ElementTraversal";
 
   private HttpServletRequest request;
 
@@ -273,6 +287,14 @@ public class AvailabilityBean {
   
   public boolean isAsmClassVisitorClassVisible() {
     return this.isClassAvailable(this.getAsmClassVisitorClassName());
+  }
+  
+  public String getElementTraversalClassName() {
+    return ELEMENT_TRAVERSAL;
+  }
+  
+  public boolean isElementTraversalClassVisible() {
+    return this.isClassAvailable(this.getElementTraversalClassName());
   }
 
   public boolean isSeNonApiClassVisible() {

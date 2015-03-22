@@ -135,6 +135,11 @@
 			  <td><code><jsp:text>${availability.asmClassVisitorClassName}</jsp:text></code></td>
 			  <td><code><jsp:text>${availability.asmClassVisitorClassVisible}</jsp:text></code></td>
 			</tr>
+			<tr>
+			  <th>ElementTraversal class</th>
+			  <td><code><jsp:text>${availability.elementTraversalClassName}</jsp:text></code></td>
+			  <td><code><jsp:text>${availability.elementTraversalClassVisible}</jsp:text></code></td>
+			</tr>
 		</tbody>
 	</table>
 	
