@@ -1,0 +1,3 @@
+<web-app xmlns="http://geronimo.apache.org/xml/ns/j2ee/web-2.0.1">
+  <inverse-classloading/>
+</web-app>

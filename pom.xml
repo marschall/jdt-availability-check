@@ -46,6 +46,7 @@
               <classifier>non-default</classifier>
               <webResources>
                 <resource>
+                  <directory>src/main/geronimo</directory>
                   <directory>src/main/glassfish</directory>
                   <directory>src/main/tomcat</directory>
                 </resource>
