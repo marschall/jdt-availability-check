@@ -34,6 +34,10 @@ public class AvailabilityBean {
   private static final String GUAVA_MAPS = "com.google.common.collect.Maps";
 
   private static final String JACKSON_FACTORY = "org.codehaus.jackson.JsonFactory";
+  
+  private static final String DOM4J_DOCUMENT_FACTORY = "org.dom4j.DocumentFactory";
+  
+  private static final String JDOM_FACTORY = "";
 
   private static final String JETTISON_CONFIGURATION = "org.codehaus.jettison.mapped.Configuration";
 
@@ -235,6 +239,14 @@ public class AvailabilityBean {
 
   public boolean isGuavaMapsClassVisible() {
     return this.isClassAvailable(this.getGuavaMapsClassName());
+  }
+  
+  public String getDom4jDocumentFactoryClassName() {
+    return DOM4J_DOCUMENT_FACTORY;
+  }
+  
+  public boolean isDom4jDocumentFactoryClassVisible() {
+    return this.isClassAvailable(this.getDom4jDocumentFactoryClassName());
   }
 
   public String getJacksonFactoryClassName() {

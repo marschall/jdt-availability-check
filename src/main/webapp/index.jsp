@@ -101,6 +101,11 @@
 			  <td><code><jsp:text>${availability.guavaMapsClassVisible}</jsp:text></code></td>
 			</tr>
 			<tr>
+			  <th>Dom4j DocumentFactory class</th>
+			  <td><code><jsp:text>${availability.dom4jDocumentFactoryClassName}</jsp:text></code></td>
+			  <td><code><jsp:text>${availability.dom4jDocumentFactoryClassVisible}</jsp:text></code></td>
+			</tr>
+			<tr>
 			  <th>Jackson Factory class</th>
 			  <td><code><jsp:text>${availability.jacksonFactoryClassName}</jsp:text></code></td>
 			  <td><code><jsp:text>${availability.jacksonFactoryClassVisible}</jsp:text></code></td>
