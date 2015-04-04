@@ -1,5 +1,6 @@
 package com.github.marschall.jdtavailabilitycheck;
 
+import javax.annotation.Resource;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
@@ -351,6 +352,10 @@ public class AvailabilityBean {
 
   public boolean isJstlPresent() {
     return this.isClassAvailable("javax.servlet.jsp.jstl.core.Config");
+  }
+  
+  public boolean isResourceLoadedFromSystem() {
+    return Resource.class.getClassLoader() == ClassLoader.getSystemClassLoader();
   }
 
   private boolean isClassAvailable(String className) {

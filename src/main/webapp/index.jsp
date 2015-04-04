@@ -209,6 +209,10 @@
 			  <td><jsp:text>${availability.jstlPresent}</jsp:text></td>
 			</tr>
 			<tr>
+			  <th>@Resource loaded form System classloader</th>
+			  <td><jsp:text>${availability.resourceLoadedFromSystem}</jsp:text></td>
+			</tr>
+			<tr>
 			  <th>Class URL</th>
 			  <td><jsp:text>${classLoader.classUrl}</jsp:text></td>
 			</tr>
