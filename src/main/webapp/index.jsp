@@ -247,6 +247,11 @@
 			  <td><code><jsp:text>${classLoader.parentClassLoaderName}</jsp:text></code></td>
 			  <td><code><jsp:text>${classLoader.parentClassLoaderParallelCapable}</jsp:text></code></td>
 			</tr>
+			<tr>
+			  <th>System ClassLoader</th>
+			  <td><code><jsp:text>${classLoader.systemClassLoaderName}</jsp:text></code></td>
+			  <td><code><jsp:text>${classLoader.systemClassLoaderParallelCapable}</jsp:text></code></td>
+			</tr>
 		</tbody>
 	</table>
 	

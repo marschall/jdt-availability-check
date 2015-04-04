@@ -58,6 +58,14 @@ public class ClassLoaderBean {
   public boolean isParentClassLoaderParallelCapable() {
     return isParallelCapable(getParentClassLoader());
   }
+  
+  public String getSystemClassLoaderName() {
+    return getSystemClassLoader().getClass().getName();
+  }
+
+  public boolean isSystemClassLoaderParallelCapable() {
+    return isParallelCapable(getSystemClassLoader());
+  }
 
   public String getParentUrls() {
     ClassLoader parentClassLoader = this.getParentClassLoader();
@@ -95,6 +103,10 @@ public class ClassLoaderBean {
 
   private ClassLoader getApplicationClassLoader() {
     return ClassLoaderBean.class.getClassLoader();
+  }
+
+  private ClassLoader getSystemClassLoader() {
+    return ClassLoader.getSystemClassLoader();
   }
 
   private boolean isParallelCapable(ClassLoader classLoader) {
