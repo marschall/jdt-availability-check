@@ -106,6 +106,26 @@
 			  <td><code><jsp:text>${availability.dom4jDocumentFactoryClassVisible}</jsp:text></code></td>
 			</tr>
 			<tr>
+			  <th>JDOM 1 Document class</th>
+			  <td><code><jsp:text>${availability.jdom1DocumentClassName}</jsp:text></code></td>
+			  <td><code><jsp:text>${availability.jdom1DocumentClassVisible}</jsp:text></code></td>
+			</tr>
+			<tr>
+			  <th>JDOM 2 Document class</th>
+			  <td><code><jsp:text>${availability.jdom2DocumentClassName}</jsp:text></code></td>
+			  <td><code><jsp:text>${availability.jdom2DocumentClassVisible}</jsp:text></code></td>
+			</tr>
+			<tr>
+			  <th>Lucene Version class</th>
+			  <td><code><jsp:text>${availability.luceneVersionClassName}</jsp:text></code></td>
+			  <td><code><jsp:text>${availability.luceneVersionClassVisible}</jsp:text></code></td>
+			</tr>
+			<tr>
+			  <th>CXF Version class</th>
+			  <td><code><jsp:text>${availability.cxfVersionClassName}</jsp:text></code></td>
+			  <td><code><jsp:text>${availability.cxfVersionClassVisible}</jsp:text></code></td>
+			</tr>
+			<tr>
 			  <th>Jackson Factory class</th>
 			  <td><code><jsp:text>${availability.jacksonFactoryClassName}</jsp:text></code></td>
 			  <td><code><jsp:text>${availability.jacksonFactoryClassVisible}</jsp:text></code></td>

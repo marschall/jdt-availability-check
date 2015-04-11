@@ -35,10 +35,26 @@ public class AvailabilityBean {
   private static final String GUAVA_MAPS = "com.google.common.collect.Maps";
 
   private static final String JACKSON_FACTORY = "org.codehaus.jackson.JsonFactory";
-  
+
   private static final String DOM4J_DOCUMENT_FACTORY = "org.dom4j.DocumentFactory";
   
-  private static final String JDOM_FACTORY = "";
+  private static final String JDOM_1_DOCUMENT = "org.jdom.Document";
+
+  private static final String JDOM_2_DOCUMENT = "org.jdom2.Document";
+
+  private static final String LUCENE_VERISON = "org.apache.lucene.util.Version"; // Hibernate Search
+
+  private static final String CXF_VERSION = "org.apache.cxf.version.Version";
+
+  private static final String bouncycastle = "";
+
+  private static final String apache_santuario = "";
+  
+  private static final String springframework = "";
+  
+  private static final String xalan = "";
+  
+  private static final String xerces = "";
 
   private static final String JETTISON_CONFIGURATION = "org.codehaus.jettison.mapped.Configuration";
 
@@ -51,16 +67,14 @@ public class AvailabilityBean {
   private static final String WOODSTOX_INPUT_FACTORY = "com.ctc.wstx.stax.WstxInputFactory";
 
   private static final String ASM_CLASS_VISITOR = "org.objectweb.asm.ClassVisitor";
-
+  
   private static final String EJB = "javax.ejb.EJB";
 
   private static final String PERSISTENCE_CONTEXT = "javax.persistence.PersistenceContext";
-  
-  private static final String STRING_UTILS = "org.apache.commons.lang.StringUtils";
-  
-  private static final String STRING_UTILS3 = "org.apache.commons.lang3.StringUtils";
 
-  private static final String RESOURCE = "javax.annotation.Resource";
+  private static final String STRING_UTILS = "org.apache.commons.lang.StringUtils";
+
+  private static final String STRING_UTILS3 = "org.apache.commons.lang3.StringUtils";
 
   /**
    * From xml-apis, not JDK.
@@ -241,13 +255,45 @@ public class AvailabilityBean {
   public boolean isGuavaMapsClassVisible() {
     return this.isClassAvailable(this.getGuavaMapsClassName());
   }
-  
+
   public String getDom4jDocumentFactoryClassName() {
     return DOM4J_DOCUMENT_FACTORY;
   }
-  
+
   public boolean isDom4jDocumentFactoryClassVisible() {
     return this.isClassAvailable(this.getDom4jDocumentFactoryClassName());
+  }
+  
+  public String getJdom1DocumentClassName() {
+    return JDOM_1_DOCUMENT;
+  }
+  
+  public boolean isJdom1DocumentClassVisible() {
+    return this.isClassAvailable(this.getJdom1DocumentClassName());
+  }
+  
+  public String getJdom2DocumentClassName() {
+    return JDOM_2_DOCUMENT;
+  }
+  
+  public boolean isJdom2DocumentClassVisible() {
+    return this.isClassAvailable(this.getJdom2DocumentClassName());
+  }
+  
+  public String getLuceneVersionClassName() {
+    return LUCENE_VERISON;
+  }
+  
+  public boolean isLuceneVersionClassVisible() {
+    return this.isClassAvailable(this.getLuceneVersionClassName());
+  }
+  
+  public String getCxfVersionClassName() {
+    return CXF_VERSION;
+  }
+  
+  public boolean isCxfVersionClassVisible() {
+    return this.isClassAvailable(this.getCxfVersionClassName());
   }
 
   public String getJacksonFactoryClassName() {
@@ -305,35 +351,35 @@ public class AvailabilityBean {
   public boolean isAsmClassVisitorClassVisible() {
     return this.isClassAvailable(this.getAsmClassVisitorClassName());
   }
-  
+
   public String getEjbClassName() {
     return EJB;
   }
-  
+
   public boolean isEjbClassVisible() {
     return this.isClassAvailable(this.getEjbClassName());
   }
-  
+
   public String getStringUtilsClassName() {
     return STRING_UTILS;
   }
-  
+
   public boolean isStringUtilsClassVisible() {
     return this.isClassAvailable(this.getStringUtilsClassName());
   }
-  
+
   public String getStringUtils3ClassName() {
     return STRING_UTILS3;
   }
-  
+
   public boolean isStringUtils3ClassVisible() {
     return this.isClassAvailable(this.getStringUtils3ClassName());
   }
-  
+
   public String getPersistenceContextClassName() {
     return PERSISTENCE_CONTEXT;
   }
-  
+
   public boolean isPersistenceContextClassVisible() {
     return this.isClassAvailable(this.getPersistenceContextClassName());
   }
@@ -353,7 +399,7 @@ public class AvailabilityBean {
   public boolean isJstlPresent() {
     return this.isClassAvailable("javax.servlet.jsp.jstl.core.Config");
   }
-  
+
   public boolean isResourceLoadedFromSystem() {
     return Resource.class.getClassLoader() == ClassLoader.getSystemClassLoader();
   }
