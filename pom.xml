@@ -13,8 +13,8 @@
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <configuration>
-          <source>1.7</source>
-          <target>1.7</target>
+          <source>1.8</source>
+          <target>1.8</target>
         </configuration>
       </plugin>
       <plugin>
@@ -30,108 +30,56 @@
       </plugin>
       <plugin>
         <artifactId>maven-war-plugin</artifactId>
-        <!-- 
         <configuration>
-          <classifier>default</classifier>
+          <archive>
+            <manifestEntries>
+              <Dependencies>jdk.unsupported</Dependencies>
+            </manifestEntries>
+          </archive>
         </configuration>
-         -->
-        <executions>
-          <execution>
-            <id>add-non-default</id>
-            <phase>package</phase>
-            <goals>
-              <goal>war</goal>
-            </goals>
-            <configuration>
-              <classifier>non-default</classifier>
-              <webResources>
-                <resource>
-                  <directory>src/main/geronimo</directory>
-                  <directory>src/main/glassfish</directory>
-                  <directory>src/main/tomcat</directory>
-                </resource>
-              </webResources>
-            </configuration>
-          </execution>
-        </executions>
       </plugin>
     </plugins>
     <pluginManagement>
       <plugins>
         <plugin>
           <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.2</version>
+          <version>3.8.1</version>
         </plugin>
         <plugin>
           <artifactId>maven-war-plugin</artifactId>
-          <version>2.6</version>
+          <version>3.3.1</version>
         </plugin>
         <plugin>
           <artifactId>maven-source-plugin</artifactId>
-          <version>2.4</version>
+          <version>3.2.1</version>
         </plugin>
         <plugin>
           <artifactId>maven-javadoc-plugin</artifactId>
-          <version>2.10.1</version>
+          <version>3.2.0</version>
         </plugin>
       </plugins>
     </pluginManagement>
   </build>
 
-  <profiles>
-    <profile>
-      <id>glassfish</id>
-      <activation>
-        <activeByDefault>false</activeByDefault>
-      </activation>
-      <build>
-        <plugins>
-          <plugin>
-            <artifactId>maven-war-plugin</artifactId>
-            <configuration>
-              <webResources>
-                <resource>
-                  <directory>src/main/glassfish</directory>
-                </resource>
-              </webResources>
-            </configuration>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
-  </profiles>
-
   <dependencies>
     <dependency>
       <groupId>org.jboss.spec.javax.servlet</groupId>
-      <artifactId>jboss-servlet-api_3.0_spec</artifactId>
+      <artifactId>jboss-servlet-api_4.0_spec</artifactId>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.jboss.spec.javax.servlet.jsp</groupId>
-      <artifactId>jboss-jsp-api_2.2_spec</artifactId>
+      <artifactId>jboss-jsp-api_2.3_spec</artifactId>
       <scope>provided</scope>
     </dependency>
-    <!--
-    <dependency>
-      <groupId>xalan</groupId>
-      <artifactId>xalan</artifactId> 
-      <version>2.7.2</version>
-    </dependency>
-    <dependency>
-      <groupId>xerces</groupId> 
-      <artifactId>xercesImpl</artifactId>
-      <version>2.11.0</version>
-      </dependency>
-      -->
   </dependencies>
 
   <dependencyManagement>
     <dependencies>
       <dependency>
-        <groupId>org.jboss.spec</groupId>
-        <artifactId>jboss-javaee-6.0</artifactId>
-        <version>3.0.3.Final</version>
+        <groupId>org.wildfly.bom</groupId>
+        <artifactId>wildfly-jakartaee8</artifactId>
+        <version>20.0.1.Final</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
