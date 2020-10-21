@@ -17,9 +17,9 @@ public class ClassLoaderBean {
 
 
   public boolean isCheckPossible() {
-    Method isRegistered = getIsRegisteredMethod();
-    return isRegistered != null
-        && isRegistered.getReturnType() == Boolean.TYPE
+    Method isRegistered = this.getIsRegisteredMethod();
+    return (isRegistered != null)
+        && (isRegistered.getReturnType() == Boolean.TYPE)
         && Modifier.isStatic(isRegistered.getModifiers());
   }
 
@@ -44,27 +44,32 @@ public class ClassLoaderBean {
   }
 
   public String getThreadContextClassLoaderName() {
-    return getThreadContextClassLoader().getClass().getName();
+    return this.getThreadContextClassLoader().getClass().getName();
   }
 
   public boolean isThreadContextClassLoaderParallelCapable() {
-    return isParallelCapable(getThreadContextClassLoader());
+    return this.isParallelCapable(this.getThreadContextClassLoader());
   }
 
   public String getParentClassLoaderName() {
-    return getParentClassLoader().getClass().getName();
+    ClassLoader parentClassLoader = this.getParentClassLoader();
+    if (parentClassLoader != null) {
+      return parentClassLoader.getClass().getName();
+    } else {
+      return "null";
+    }
   }
 
   public boolean isParentClassLoaderParallelCapable() {
-    return isParallelCapable(getParentClassLoader());
+    return this.isParallelCapable(this.getParentClassLoader());
   }
-  
+
   public String getSystemClassLoaderName() {
-    return getSystemClassLoader().getClass().getName();
+    return this.getSystemClassLoader().getClass().getName();
   }
 
   public boolean isSystemClassLoaderParallelCapable() {
-    return isParallelCapable(getSystemClassLoader());
+    return this.isParallelCapable(this.getSystemClassLoader());
   }
 
   public String getParentUrls() {
@@ -86,11 +91,11 @@ public class ClassLoaderBean {
   }
 
   public String getApplicationClassLoaderName() {
-    return getApplicationClassLoader().getClass().getName();
+    return this.getApplicationClassLoader().getClass().getName();
   }
 
   public boolean isApplicationClassLoaderParallelCapable() {
-    return isParallelCapable(getApplicationClassLoader());
+    return this.isParallelCapable(this.getApplicationClassLoader());
   }
 
   private ClassLoader getThreadContextClassLoader() {
@@ -98,7 +103,7 @@ public class ClassLoaderBean {
   }
 
   private ClassLoader getParentClassLoader() {
-    return getApplicationClassLoader().getParent();
+    return this.getApplicationClassLoader().getParent();
   }
 
   private ClassLoader getApplicationClassLoader() {
@@ -110,7 +115,10 @@ public class ClassLoaderBean {
   }
 
   private boolean isParallelCapable(ClassLoader classLoader) {
-    Method isRegisteredMethod = getIsRegisteredMethod();
+    if (classLoader == null) {
+      return false;
+    }
+    Method isRegisteredMethod = this.getIsRegisteredMethod();
     if (isRegisteredMethod == null) {
       return false;
     }
@@ -136,7 +144,7 @@ public class ClassLoaderBean {
     // vfs:/content/jdt-availability-check.war/WEB-INF/classes/com/github/marschall/jdtavailabilitycheck/ClassLoaderBean.class
     // file:/Users/marschall/Hacking/Tomcat/apache-tomcat-8.0.15/webapps/jdt-availability-check/WEB-INF/classes/com/github/marschall/jdtavailabilitycheck/ClassLoaderBean.class
     String resourceName = ClassLoaderBean.class.getName().replace('.', '/') + ".class";
-    return getApplicationClassLoader().getResource(resourceName).toString();
+    return this.getApplicationClassLoader().getResource(resourceName).toString();
   }
 
 
